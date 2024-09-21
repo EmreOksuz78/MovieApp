@@ -14,7 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.emreoksuz.movieapp.Adapter.RecyclerViewAdapter;
 import com.emreoksuz.movieapp.Model.Movie;
 import com.emreoksuz.movieapp.R;
 import com.emreoksuz.movieapp.Service.MovieApi;
@@ -24,6 +27,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import retrofit2.Call;
@@ -43,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -54,7 +59,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        loadApi();
+
+
+
+
+
+
 
         buttonLogin=findViewById(R.id.buttonLogin);
         buttonSignup=findViewById(R.id.buttonSignUp);
@@ -119,29 +129,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void loadApi(){
 
-        MovieApi movieApi = MovieApiService.getClient().create(MovieApi.class);
-        Call<List<Movie>> call = movieApi.getMovies();
-
-        call.enqueue(new Callback<List<Movie>>() {
-            @Override
-            public void onResponse(Call<List<Movie>> call, Response<List<Movie>> response) {
-                if (response.isSuccessful()){
-                List<Movie> movieList= response.body();
-                for (Movie movie:movieList){
-                    System.out.println(movie.getTitle());
-                }
-                }
-            }
-
-            @Override
-            public void onFailure(Call<List<Movie>> call, Throwable t) {
-
-            }
-        });
-
-
-    }
 
 }

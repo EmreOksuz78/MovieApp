@@ -52,4 +52,6 @@ dependencies {
     val retrofitVersion = "2.8.1"
     implementation ("com.squareup.retrofit2:retrofit:$retrofitVersion")
     implementation ("com.squareup.retrofit2:converter-gson:$retrofitVersion")
+
+    implementation("androidx.recyclerview:recyclerview:1.3.2")
 }
