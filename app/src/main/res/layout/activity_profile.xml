@@ -5,31 +5,92 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.MoviesActivity"
+    tools:context=".Activities.ProfileActivity"
     android:background="#021526"
     >
 
-    <!-- Toolbar -->
 
-    <EditText
-        android:id="@+id/editTextText3"
-        android:layout_width="353dp"
-        android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/search_bar"
-        android:drawableStart="@drawable/search"
-        android:drawablePadding="15dp"
-        android:drawableTint="@color/white"
-        android:ems="10"
-        android:hint="Search Movies..."
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:textColorHint="#808080"
+    <ImageView
+        android:id="@+id/profileImage"
+        android:layout_width="108dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="100dp"
+        android:visibility="visible"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/editTextText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="140dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="40dp"
+        android:textAlignment="center"
+        android:text="Your Profile"
+        android:textSize="24sp"
         android:textColor="@color/white"
-        android:textSize="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="300dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        android:textColor="@color/white"
+        android:hint="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText2"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="400dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        android:textColor="@color/white"
+        android:hint="Email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextText4"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="500dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColorHint="#808080"
+        android:textColor="@color/white"
+        android:hint="Password"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/updateProfile"
+        android:layout_width="304dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="100dp"
+        android:text="Update Profile"
+        android:textSize="18sp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="#FF8C00"
+        app:strokeWidth="2dp" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"

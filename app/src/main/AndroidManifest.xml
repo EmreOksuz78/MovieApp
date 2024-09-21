@@ -13,13 +13,16 @@
         android:theme="@style/Theme.MovieApp"
         tools:targetApi="31">
         <activity
-            android:name=".MoviesActivity"
+            android:name=".Activities.ProfileActivity"
             android:exported="false" />
         <activity
-            android:name=".SecondActivity"
+            android:name=".Activities.MoviesActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".Activities.SecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

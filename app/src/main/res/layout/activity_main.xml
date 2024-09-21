@@ -5,13 +5,13 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
+    tools:context=".Activities.MainActivity"
     android:background="#021526"
 
     >
 
     <EditText
-        android:id="@+id/editTextText"
+        android:id="@+id/emailText"
         android:layout_width="304dp"
         android:layout_height="50dp"
         android:layout_marginTop="300dp"
@@ -41,20 +41,20 @@
         />
 
     <EditText
-        android:id="@+id/editTextText2"
+        android:id="@+id/passwordText"
         android:layout_width="304dp"
         android:layout_height="50dp"
         android:layout_marginTop="5dp"
         android:background="@drawable/edit_text_background"
         android:ems="10"
         android:hint="Enter Password"
-        android:inputType="text"
+        android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textColorHint="#808080"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+        app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonLogin"
@@ -68,7 +68,7 @@
         app:strokeWidth="2dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
+        app:layout_constraintTop_toBottomOf="@+id/passwordText" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignUp"
