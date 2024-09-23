@@ -5,93 +5,38 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Activities.ProfileActivity"
+    tools:context=".Activities.DetailsActivity"
     android:background="#021526"
     >
 
-
-    <ImageView
-        android:id="@+id/profileImage"
-        android:layout_width="108dp"
-        android:layout_height="68dp"
+    <TextView
+        android:id="@+id/detailTitle"
+        android:layout_width="224dp"
+        android:layout_height="73dp"
         android:layout_marginTop="100dp"
-        android:layout_marginBottom="300dp"
-        android:tint="@color/white"
-        android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/updateProfile"
+        android:text="TextView"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@drawable/profile" />
+        android:textAlignment="center"
+        android:textSize="18dp"
+        />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="140dp"
-        android:layout_height="46dp"
-        android:layout_marginTop="40dp"
+        android:id="@+id/detailCountry"
+        android:layout_width="224dp"
+        android:layout_height="73dp"
+        android:layout_marginTop="80dp"
+        android:text="TextView"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailTitle"
         android:textAlignment="center"
-        android:text="Your Profile"
-        android:textSize="24sp"
-        android:textColor="@color/white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textSize="24dp"
 
-    <EditText
-        android:id="@+id/editTextText"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="300dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColorHint="#808080"
-        android:textColor="@color/white"
-        android:hint="Name"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText2"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="400dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColorHint="#808080"
-        android:textColor="@color/white"
-        android:hint="Email"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextText4"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="500dp"
-        android:ems="10"
-        android:inputType="text"
-        android:textColorHint="#808080"
-        android:textColor="@color/white"
-        android:hint="Password"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/updateProfile"
-        android:layout_width="304dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="100dp"
-        android:text="Update Profile"
-        android:textSize="18sp"
-        app:cornerRadius="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:strokeColor="#FF8C00"
-        app:strokeWidth="2dp" />
+        />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -171,4 +116,16 @@
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="@+id/toolbar"
         app:layout_constraintTop_toTopOf="@+id/toolbar" />
+
+    <ImageView
+        android:id="@+id/favoriteMovies"
+        android:layout_width="106dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="140dp"
+        app:layout_constraintBottom_toTopOf="@+id/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:tint="@color/white"
+        app:srcCompat="@drawable/heart" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

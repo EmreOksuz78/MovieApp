@@ -1,5 +1,7 @@
 package com.emreoksuz.movieapp.Adapter;
 
+import android.content.Intent;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,9 +11,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.emreoksuz.movieapp.Activities.DetailsActivity;
 import com.emreoksuz.movieapp.Model.Movie;
 import com.emreoksuz.movieapp.R;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RowHolder> {
@@ -34,12 +38,19 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     @Override
     public void onBindViewHolder(@NonNull RowHolder holder, int position) {
         Movie movie = moviesList.get(position);
-        holder.title.setText(movie.getTitle());
-        holder.genre.setText(movie.getCountry());
+        holder.title.setText("Movie Name : "+movie.getTitle());
+        holder.genre.setText("Movie Country : "+movie.getCountry());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(holder.itemView.getContext(), "test", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(holder.itemView.getContext(), DetailsActivity.class);
+
+                Bundle bundle = new Bundle();
+                bundle.putString("title",movie.getTitle());
+                bundle.putString("country",movie.getCountry());
+                intent.putExtras(bundle);
+                holder.itemView.getContext().startActivity(intent);
+                Toast.makeText(holder.itemView.getContext(), movie.getTitle()+" : " + movie.getCountry(), Toast.LENGTH_SHORT).show();
             }
         });
 
