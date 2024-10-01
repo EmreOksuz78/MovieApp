@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -32,6 +33,7 @@ public class MoviesActivity extends AppCompatActivity {
     RecyclerView recyclerView;
     RecyclerViewAdapter recyclerViewAdapter;
     ImageView profile;
+    TextView searchText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +50,7 @@ public class MoviesActivity extends AppCompatActivity {
 
         recyclerView=findViewById(R.id.recyclerViewMovies);
         profile=findViewById(R.id.profile);
+        searchText=findViewById(R.id.searchText);
 
         profile.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -12,7 +12,7 @@
     <!-- Toolbar -->
 
     <EditText
-        android:id="@+id/editTextText3"
+        android:id="@+id/searchText"
         android:layout_width="353dp"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
@@ -121,5 +121,5 @@
         app:layout_constraintBottom_toTopOf="@+id/toolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextText3" />
+        app:layout_constraintTop_toBottomOf="@+id/searchText" />
 </androidx.constraintlayout.widget.ConstraintLayout>
